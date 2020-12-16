@@ -1,0 +1,19 @@
+<p>todos works!</p>
+<div class="todoComponentContainer">
+  <div class="todoList">
+    <div class="todo" *ngFor="let todo of todos">
+      <div class="todo__title">{{todo.title}}</div>
+      <div class="todo__details">{{todo.details}}</div>
+      <div class="state"
+        [ngClass]="{'false': todo.completed === false,
+        'true' : todo.completed === true}"
+        (click)="changeState(todo)">
+          {{todo.state}}
+      </div>
+      <div class="timeStamp">Created at: {{todo.date}}</div>
+    </div>
+  </div>
+  <div class="todoDetails">
+    <router-outlet></router-outlet>
+  </div>
+</div>
