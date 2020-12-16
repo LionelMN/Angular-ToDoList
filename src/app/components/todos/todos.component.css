@@ -1,0 +1,27 @@
+.todoList {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 100px);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.todo {
+  margin: 0 2.5px 10px 2.5px;
+  border: 1px solid black;
+}
+
+.state {
+  border: 1px solid black;
+  border-radius: 50px 50px 50px 50px / 45px 45px 45px 45px;;
+  width: 100px;
+  padding: 1px 2px;
+  text-align: center;
+  color: white;
+}
+
+.false {
+  background: red;
+}
+
+.true {
+  background: green;
+}
