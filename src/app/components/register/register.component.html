@@ -1,0 +1,24 @@
+<form #frmRegister="ngForm">
+  <div class="input username">
+    <legend>Username</legend>
+    <input type="text" placeholder="Username" name="username" ngModel required/>
+    <span class="error">{{msgErrors[0]}}</span>
+  </div>
+  <div class="input email">
+    <legend>Email</legend>
+    <input type="email" placeholder="Email@email.com" name="email" ngModel required/>
+    <span class="error">{{msgErrors[1]}}</span>
+  </div>
+  <div class="input password">
+    <legend>Password</legend>
+    <input type="password" placeholder="Password" name="password" ngModel required/>
+    <span class="error">{{msgErrors[2]}}</span>
+    <legend>Confirm password</legend>
+    <input type="password" placeholder="Confirm password" name="cPassword" ngModel required/>
+    <span class="error">{{msgErrors[3]}}</span>
+  </div>
+  <div class="sendButton">
+    <input type="button" value="Register" (click)="onValidate(frmRegister)"/>
+    <input type="reset" value="Reset" (click)="reset()" />
+  </div>
+</form>
