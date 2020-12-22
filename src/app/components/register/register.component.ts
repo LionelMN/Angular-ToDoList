@@ -10,7 +10,9 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  msgErrors = []
+  msgErrors = [];
+  showPass : boolean = false;
+  showCPass : boolean = false;
   constructor(
     private auth : AuthService,
     private router : Router
@@ -62,6 +64,21 @@ export class RegisterComponent implements OnInit {
 
   reset(){
     this.msgErrors = []
+  }
+
+  showPassword(id){
+    const x = document.getElementById(id);
+    if (x.getAttribute('type') === 'password') {
+      x.setAttribute('type', 'text');
+    } else {
+      x.setAttribute('type', 'password');
+    }
+    if (id === "password"){
+      this.showPass = !this.showPass;
+    }
+    if (id === "cpassword"){
+      this.showCPass = !this.showCPass;
+    }
   }
 
   ngOnInit(): void {
