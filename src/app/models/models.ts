@@ -16,3 +16,15 @@ export interface Users {
   todos: string[],
   email: string,
 };
+
+export interface JwtResponse {
+  dataUser: {
+    _id: string,
+    username: string,
+    password: string,
+    todos: string[],
+    email: string,
+  },
+  token: string,
+  status: number
+}
