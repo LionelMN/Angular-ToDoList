@@ -18,7 +18,7 @@ export interface Users {
 };
 
 export interface JwtResponse {
-  dataUser: {
+  user: {
     _id: string,
     username: string,
     password: string,
@@ -26,5 +26,6 @@ export interface JwtResponse {
     email: string,
   },
   token: string,
-  status: number
+  status: number,
+  err : string,
 }

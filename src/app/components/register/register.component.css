@@ -27,7 +27,7 @@
 
 .fields {
   display: grid;
-  grid-template-rows: repeat(3, 25px);
+  grid-template-rows: repeat(auto-fill, 25px);
 }
 
 .input {
@@ -67,10 +67,10 @@ svg {
 }
 
 .buttons {
-  padding-top: 10px;
+  padding-top: 15px;
   align-content: space-between;
   justify-content: center;
-  row-gap: 30px;
+  row-gap: 10px;
 }
 
 .button {
