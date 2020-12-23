@@ -1,4 +1,5 @@
 <div class="todoComponentContainer">
+  <app-create-todo></app-create-todo>
   <div class="todoList">
     <div class="todo" *ngFor="let todo of todos">
       <div class="todo__title">{{todo.title}}</div>
@@ -11,8 +12,5 @@
       </div>
       <div class="timeStamp">Created at: {{todo.date}}</div>
     </div>
-  </div>
-  <div class="todoDetails">
-    <router-outlet></router-outlet>
   </div>
 </div>

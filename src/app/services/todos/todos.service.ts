@@ -17,6 +17,17 @@ export class TodosService {
       return this.http.get(`${environment.backUrl}/todos/user/${user}`) as Observable<Todos[]>
     }
 
+    public createTodo(todo: Todos) : Observable<any>{
+      return this.http.post(`${environment.backUrl}/todos/`, todo).pipe(tap(
+        (res) => {
+          if (res) {
+          this.msg = res;
+          console.log(this.msg)
+          }
+        })
+      );
+    }
+
     public editTodo(todo : Todos) : Observable<any>{
       return this.http.put(`${environment.backUrl}/todos/${todo._id}`, todo).pipe(tap(
         res => {
