@@ -22,6 +22,9 @@ export class RegisterComponent implements OnInit {
     this.auth.register(user).subscribe( () => {
       this.router.navigateByUrl('/login')
     })
+    setTimeout( () => {
+      this.msgErrors[4] = "User or password are incorrect"
+    }, 500)
   }
 
   onValidate(form) : void {
