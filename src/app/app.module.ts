@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './services/auth/auth.service';
 import { AuthInterceptor } from './interceptors/auth/auth.interceptor';
+import { CreateTodoComponent } from './components/create-todo/create-todo.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AuthInterceptor } from './interceptors/auth/auth.interceptor';
     TodosComponent,
     NavbarComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    CreateTodoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,22 @@
+<div class="createTodo">
+  <h3>Add Todo</h3>
+  <form #todoForm="ngForm" class="form">
+    <div class="title fields">
+      <legend>Title</legend>
+      <div class="input-container">
+        <input type="text" placeholder="title" name="title" ngModel required class="input title-input"/>
+      </div>
+    </div>
+    <div class="details fields">
+      <legend>Details</legend>
+      <div class="input-container">
+        <textarea placeholder="details (Optional)" name="details" ngModel required class="input details-input"></textarea>
+      </div>
+    </div>
+    <div class="buttons fields">
+      <input type="button" value="Submit" (click)="onValidate(todoForm)" class="button register-button"/>
+      <input type="reset" value="Reset" (click)="reset()" class="button reset-button"/>
+      <span class="error">{{msgErrors}}</span>
+    </div>
+  </form>
+</div>
