@@ -1,0 +1,92 @@
+.createTodo {
+  background: var(--bg-primary);
+  width: 500px;
+  height: 300px;
+}
+
+.title {
+  background: var(--bg-secondary);
+  margin: 0;
+}
+
+.title h3{
+  margin: 0 0 5px;
+  text-align: center;
+}
+
+.form {
+  padding: 0 0 0px 5px;
+}
+
+legend {
+  padding: 0px;
+}
+
+.todo-title input{
+  width: 480px;
+  border-radius: 5px;
+}
+
+.details textarea {
+  border-radius: 5px;
+  max-width: 480px;
+  min-width: 480px;
+  min-height: 100px;
+  max-height: 100px;
+}
+
+.buttons {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  justify-content: space-around;
+}
+
+.button {
+  border: none;
+  border-radius: 80px 80px 80px 80px / 75px 75px 75px 75px;
+  outline: none;
+  color: #fff;
+  height: 35px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+
+.submit-button {
+  background: radial-gradient(circle, rgb(54, 1, 56) 0%, rgba(223, 73, 166,1) 56%, rgba(255, 126, 238,1) 100%);
+}
+
+.reset-button {
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgb(36, 0, 9) 0%, rgba(164,12,91,1) 56%, rgba(255,0,50,1) 100%);
+}
+
+.error {
+  height: 20px;
+  color: rgb(206, 15, 15);
+  text-align: center;
+  margin: 5px 0 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .createTodo {
+    width: 100%;
+    border-radius: 30px 30px 50px 50px
+  }
+
+  .title {
+    border-radius: 50px 50px 0px 0px;
+  }
+
+  .todo-title input {
+    width: 367px;
+  }
+
+  .details textarea {
+    max-width: 367px;
+    min-width: 367px;
+  }
+}

@@ -1,6 +1,18 @@
 main {
+  margin-top: 0;
   margin-left: 5rem;
   padding: 1rem;
+  padding-top: 0;
+}
+
+.main-title {
+  height: 65px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.main-title h1 {
+  margin: 0;
 }
 
 .navbar {
@@ -55,11 +67,11 @@ main {
 }
 
 .fa-primary {
-  color: #ff7eee;
+  color: rgb(255, 126, 238);
 }
 
 .fa-secondary {
-  color: #df49a6;
+  color: rgb(223, 73, 166);
 }
 
 .fa-primary,

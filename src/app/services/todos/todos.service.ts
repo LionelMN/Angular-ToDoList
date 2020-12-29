@@ -22,7 +22,6 @@ export class TodosService {
         (res) => {
           if (res) {
           this.msg = res;
-          console.log(this.msg)
           }
         })
       );

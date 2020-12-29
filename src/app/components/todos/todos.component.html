@@ -4,13 +4,19 @@
     <div class="todo" *ngFor="let todo of todos">
       <div class="todo__title">{{todo.title}}</div>
       <div class="todo__details">{{todo.details}}</div>
-      <div class="state"
+      <div class="state">
+        <input class="state"
+        type="button"
         [ngClass]="{'false': todo.completed === false,
         'true' : todo.completed === true}"
-        (click)="changeState(todo)">
-          {{todo.state}}
+        (click)="changeState(todo)"
+        value="{{todo.state}}"
+        >
+
       </div>
-      <div class="timeStamp">Created at: {{todo.date}}</div>
+      <div class="timeStamp">
+        Created at: {{todo.date}}
+      </div>
     </div>
   </div>
 </div>

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { log } from 'console';
 import { Todos, Users } from '../../models/models';
 import { TodosService } from '../../services/todos/todos.service';
 
@@ -35,7 +34,6 @@ export class TodosComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(JSON.parse(localStorage.getItem("user")))
     this.getTodosOfUser(JSON.parse(localStorage.getItem("user")))
   }
 
