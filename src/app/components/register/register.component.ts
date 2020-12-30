@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
       this.router.navigateByUrl('/login')
     })
     setTimeout( () => {
-      this.msgErrors[4] = "User or password are incorrect"
+      this.msgErrors[4] = "User or email already in use"
     }, 500)
   }
 

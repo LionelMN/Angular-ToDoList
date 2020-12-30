@@ -1,0 +1,113 @@
+.createTodo {
+  background: var(--bg-primary);
+  width: 31.5rem;
+  height: 18.5rem;
+}
+
+.title {
+  background: var(--bg-secondary);
+  margin: 0;
+}
+
+.title h3{
+  margin: 0 0 0.4rem;
+  text-align: center;
+}
+
+.form {
+  padding: 0 0 0px 0.4rem;
+}
+
+legend {
+  padding: 0;
+}
+
+.todo-title input{
+  width: 30rem;
+  border-radius: 5px;
+}
+
+.details textarea {
+  border-radius: 5px;
+  max-width: 30rem;
+  min-width: 30rem;
+  min-height: 6rem;
+  max-height: 6rem;
+}
+
+.buttons {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 6rem);
+  justify-content: space-around;
+}
+
+.button {
+  border: none;
+  border-radius: 80px 80px 80px 80px / 75px 75px 75px 75px;
+  outline: none;
+  color: #fff;
+  height: 2.5rem;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+
+.submit-button {
+  background: radial-gradient(circle, rgb(54, 1, 56) 0%, rgba(223, 73, 166,1) 56%, rgba(255, 126, 238,1) 100%);
+}
+
+.reset-button {
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgb(36, 0, 9) 0%, rgba(164,12,91,1) 56%, rgba(255,0,50,1) 100%);
+}
+
+.error {
+  height: 1.2rem;
+  color: rgb(206, 15, 15);
+  text-align: center;
+  margin: 0.3rem 0 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .createTodo {
+    width: 92%;
+    margin: 0 1rem;
+    border-radius: 30px 30px 50px 50px;
+  }
+
+  .title {
+    border-radius: 50px 50px 0px 0px;
+  }
+
+  .todo-title input {
+    width: 96%;
+  }
+
+  .details textarea {
+    max-width: 96%;
+    min-width: 96%;
+  }
+}
+
+/* @media only screen and (max-width: 400px) {
+  .createTodo {
+    width: 100%;
+    border-radius: 30px 30px 50px 50px
+  }
+
+  .title {
+    border-radius: 50px 50px 0px 0px;
+  }
+
+  .todo-title input {
+    width: 20rem;
+  }
+
+  .details textarea {
+    max-width: 20rem;
+    min-width: 20rem;
+  }
+} */

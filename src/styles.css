@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
+  color: white;
   font-size: 16px;
   font-family: 'Open Sans';
   --text-primary: #b6b6b6;
@@ -10,8 +11,7 @@
 }
 
 body {
-  color: black;
-  background-color: #fff;
+  background-color: #000;
   margin: 0;
   padding: 0;
 }

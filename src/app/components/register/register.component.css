@@ -4,12 +4,12 @@
   text-align: center;
   color: white;
   margin: 0;
-  padding-top: 100px;
+  padding-top: 6.5rem;
 }
 
 .title {
   background-color: rgba(143,0,255,1);
-  height: 70px;
+  height: 5rem;
   border-radius: 50px 50px 0px 0px;
 }
 
@@ -18,7 +18,7 @@
   border-radius: 0px 0px 50px 50px ;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(4, 100px) ;
+  grid-template-rows: 6.5rem 6.5rem 6.5rem 7rem 3rem ;
   justify-content: center;
   row-gap: 10px;
   padding: 30px;
@@ -39,15 +39,16 @@
 .input-container {
   height: 40px;
   display: grid;
-  grid-template-columns: 25px 460px;
+  grid-template-columns: 25px 240px;
   column-gap: 5px;
   align-content: center;
+  justify-content: center;
 }
 
 .input-container-password {
   height: 40px;
   display: grid;
-  grid-template-columns: 200px 25px;
+  grid-template-columns: 25px 200px;
   column-gap: 5px;
   align-content: center;
 }
@@ -66,11 +67,14 @@ svg {
   color: rgb(206, 15, 15);
 }
 
+
 .buttons {
   padding-top: 15px;
+  display: grid;
+  grid-template-rows: repeat(2, 2rem);
   align-content: space-between;
   justify-content: center;
-  row-gap: 10px;
+  row-gap: 1rem;
 }
 
 .button {
@@ -98,4 +102,47 @@ svg {
 
 .clickable-svg{
   cursor: pointer;
+}
+
+.toLogin{
+  cursor: pointer;
+}
+
+/* Small Screens */
+@media only screen and (max-width: 600px) {
+  .register-container {
+    margin-top: -40px;
+  }
+
+  .form {
+    height: 520px;
+    width: 250px;
+  }
+
+  .input-container {
+    grid-template-columns: 25px 180px;
+  }
+
+  .passwords-field {
+    display: grid;
+    grid-template-columns: repeat(1, 250px);
+    grid-template-rows: repeat(2, 90px);
+  }
+
+  .buttons {
+    margin-top: 60px;
+    align-content: stretch;
+  }
+
+  .button {
+    width: 190px;
+  }
+
+  .reset-button {
+    margin-top: 15px
+  }
+
+  .toLogin {
+    margin-top: 50px;
+  }
 }
