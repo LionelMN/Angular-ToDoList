@@ -1,7 +1,7 @@
 .createTodo {
   background: var(--bg-primary);
-  width: 500px;
-  height: 300px;
+  width: 31.5rem;
+  height: 18.5rem;
 }
 
 .title {
@@ -10,35 +10,35 @@
 }
 
 .title h3{
-  margin: 0 0 5px;
+  margin: 0 0 0.4rem;
   text-align: center;
 }
 
 .form {
-  padding: 0 0 0px 5px;
+  padding: 0 0 0px 0.4rem;
 }
 
 legend {
-  padding: 0px;
+  padding: 0;
 }
 
 .todo-title input{
-  width: 480px;
+  width: 30rem;
   border-radius: 5px;
 }
 
 .details textarea {
   border-radius: 5px;
-  max-width: 480px;
-  min-width: 480px;
-  min-height: 100px;
-  max-height: 100px;
+  max-width: 30rem;
+  min-width: 30rem;
+  min-height: 6rem;
+  max-height: 6rem;
 }
 
 .buttons {
   margin-top: 5px;
   display: grid;
-  grid-template-columns: repeat(2, 100px);
+  grid-template-columns: repeat(2, 6rem);
   justify-content: space-around;
 }
 
@@ -47,7 +47,7 @@ legend {
   border-radius: 80px 80px 80px 80px / 75px 75px 75px 75px;
   outline: none;
   color: #fff;
-  height: 35px;
+  height: 2.5rem;
 }
 
 .button:hover {
@@ -65,13 +65,34 @@ legend {
 }
 
 .error {
-  height: 20px;
+  height: 1.2rem;
   color: rgb(206, 15, 15);
   text-align: center;
-  margin: 5px 0 20px;
+  margin: 0.3rem 0 1rem;
 }
 
 @media only screen and (max-width: 600px) {
+  .createTodo {
+    width: 92%;
+    margin: 0 1rem;
+    border-radius: 30px 30px 50px 50px;
+  }
+
+  .title {
+    border-radius: 50px 50px 0px 0px;
+  }
+
+  .todo-title input {
+    width: 96%;
+  }
+
+  .details textarea {
+    max-width: 96%;
+    min-width: 96%;
+  }
+}
+
+/* @media only screen and (max-width: 400px) {
   .createTodo {
     width: 100%;
     border-radius: 30px 30px 50px 50px
@@ -82,11 +103,11 @@ legend {
   }
 
   .todo-title input {
-    width: 367px;
+    width: 20rem;
   }
 
   .details textarea {
-    max-width: 367px;
-    min-width: 367px;
+    max-width: 20rem;
+    min-width: 20rem;
   }
-}
+} */

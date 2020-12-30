@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Todos, Users } from '../../models/models';
 import { TodosService } from '../../services/todos/todos.service';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-todos',
@@ -10,7 +11,10 @@ import { TodosService } from '../../services/todos/todos.service';
 export class TodosComponent implements OnInit {
 
   todos : Todos[] = []
-  constructor(private todosService : TodosService ) { }
+  constructor(
+    private todosService : TodosService,
+    @Inject(DOCUMENT) private document: Document
+    ) { }
 
   getTodosOfUser(user : string){
     this.todosService.getAllTodosOfUser(user).subscribe( gotTodos => {
@@ -31,6 +35,12 @@ export class TodosComponent implements OnInit {
     } else todo.state = "Incompleted"
 
     this.todosService.editTodo(todo).subscribe()
+  }
+
+  deleteTodo(todoId :string) {
+    this.todosService.deleteTodo(todoId).subscribe( () => {
+      this.document.location.reload()
+    });
   }
 
   ngOnInit(): void {

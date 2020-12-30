@@ -5,7 +5,6 @@
   color: white;
   margin: 0;
   padding-top: 100px;
-  margin-left: 600px;
 }
 
 .title {
@@ -96,15 +95,12 @@ svg {
 
 .toRegister {
   margin-top: 25px;
+  cursor: pointer;
 }
 
 
 /* Small Screens */
 @media only screen and (max-width: 600px) {
-  .register-container {
-    margin-left: 45px;
-  }
-
   .form {
     max-width: 500px;
     width: 250px;

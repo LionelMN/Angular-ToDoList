@@ -13,7 +13,7 @@ export class TodosService {
   msg : string
   constructor(private http: HttpClient) { }
 
-    public getAllTodosOfUser(user) : Observable<any>{
+    public getAllTodosOfUser(user) : Observable<Todos[]>{
       return this.http.get(`${environment.backUrl}/todos/user/${user}`) as Observable<Todos[]>
     }
 
@@ -35,6 +35,10 @@ export class TodosService {
           }
         }
       ))
+    }
+
+    public deleteTodo(todoId) : Observable<any>{
+      return this.http.delete(`${environment.backUrl}/todos/${todoId}`) as Observable<any>
     }
 
 }
