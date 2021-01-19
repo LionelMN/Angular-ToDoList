@@ -111,38 +111,35 @@ svg {
 /* Small Screens */
 @media only screen and (max-width: 600px) {
   .register-container {
-    margin-top: -40px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .title {
+    border-radius: 0;
+    height: 10vh;
   }
 
   .form {
-    height: 520px;
-    width: 250px;
-  }
-
-  .input-container {
-    grid-template-columns: 25px 180px;
+    border-radius: 0;
+    padding: 0;
+    width: 100vw;
+    height: 90vh;
+    grid-template-rows: 6.5rem 6.5rem 10.5rem 8rem 3rem;
   }
 
   .passwords-field {
-    display: grid;
-    grid-template-columns: repeat(1, 250px);
-    grid-template-rows: repeat(2, 90px);
+    grid-template-rows: 50%;
+    grid-template-columns: 100%;
+    justify-items: center;
   }
 
-  .buttons {
-    margin-top: 60px;
-    align-content: stretch;
+  .input-container-password {
+    justify-self: center;
+    grid-template-columns: 25px 240px;
   }
 
-  .button {
-    width: 190px;
-  }
-
-  .reset-button {
-    margin-top: 15px
-  }
-
-  .toLogin {
-    margin-top: 50px;
+  .fields {
+    margin-top: 1rem;
   }
 }
